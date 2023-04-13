@@ -1,18 +1,15 @@
 # python3
 
 def read_input():
-    # this function needs to aquire input both from keyboard and file
-    # as before, use capital i (input from keyboard) and capital f (input from file) to choose which input type will follow
-    
-    
-    # after input type choice
-    # read two lines 
-    # first line is pattern 
-    # second line is text in which to look for pattern 
-    
-    # return both lines in one return
-    
-    # this is the sample return, notice the rstrip function
+    text = input()
+    if "I" in text:
+        pattern = input()
+        text = input()
+    elif "F" in text:
+        with open ("../tests/06") as f:
+            pattern = f.readline()
+            text = f.readline()
+
     return (input().rstrip(), input().rstrip())
 
 def print_occurrences(output):
